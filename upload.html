@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Vanguard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            -background-image: url('https://example.com/your-background-image.jpg'); /* Replace with your actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #000000;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #fakeNewsForm {
+            margin-top: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Fake News📰 Detection System</h1>
+        <p>Your Trusted Source for News Verification</p>
+    </header>
+
+    <nav>
+
+        <nav>
+        <a href="homepage">Home</a>
+        <a href="upload">Upload</a>
+        <a href="documentation">Documentation></a>
+    </nav>
+
+    </nav>
+
+    <main>
+        <div class="login">
+	<h1>Fake News📰  Detector</h1>
+
+    <form action="{{ url_for('predict')}}" method="POST">
+    	<textarea  name="message" rows="6" cols="50" required="required" style="font-size: 18pt"></textarea>
+		<br> </br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+
+        	<div class="results">
+
+	{% if prediction == ['FAKE']%}
+	<h2 style="color:red;">Spam⚠️News📰 </h2>
+	{% elif prediction == ['REAL']%}
+				<h2 style="color:green;"><b>Real News📰</b></h2>
+	{% endif %}
+
+	</div>
+
+    </form>
+
+</div>
+
+
+
+
+
+    </main>
+	<body>
+
+</body>
+</body>
+</html>
